@@ -16,7 +16,7 @@ public class Main {
 	
 	private boolean isLog(){
 		//return la.isValidLogFileName(s);
-		return ManFactory.getInstance().isValid(s);
+		return ManFactory.getInstance().getFileExtMan().isValid(s);
 	}
 	
 	public static void main(String[] args){

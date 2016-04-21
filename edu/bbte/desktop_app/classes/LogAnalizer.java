@@ -1,14 +1,12 @@
 package edu.bbte.desktop_app.classes;
 
-import edu.bbte.desktop_app.interfaces.FileExtMan;
-
 public class LogAnalizer{
 
-	private FileExtMan fileExtMan;
+	//private FileExtMan fileExtMan;
 	
-	public LogAnalizer(FileExtMan fileExtMan){
+	/*public LogAnalizer(FileExtMan fileExtMan){
 		this.fileExtMan = fileExtMan;
-	}
+	}*/
 	public LogAnalizer(){
 		
 	}
@@ -18,8 +16,8 @@ public class LogAnalizer{
 			throw new IllegalArgumentException("Name is to short!");
 		}
 		
-		//return ManFactory.getInstance().isValid(s);
-		return fileExtMan.isValid(s);
+		return ManFactory.getInstance().getFileExtMan().isValid(s);
+		//return fileExtMan.isValid(s);
 	}
 
 }
