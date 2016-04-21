@@ -1,17 +1,22 @@
 package edu.bbte.desktop_app.main;
 
-import edu.bbte.desktop_app.classes.LogAnalizer;
+import edu.bbte.desktop_app.classes.ManFactory;
 
 public class Main {
-	private LogAnalizer la;
+	//private LogAnalizer la;
 	private String s;
+	//private FileExtMan fileExtMan;
+	
 	public Main(String s){
 		this.s = s;
-		la = new LogAnalizer();
+		//ide a megirt fileExtMan kell, csak azert van benn, hogy ne okozzon hibat
+		//fileExtMan = new FakeFileExtMan(true);
+		//la = new LogAnalizer(fileExtMan);
 	}
 	
 	private boolean isLog(){
-		return la.isValidLogFileName(s);
+		//return la.isValidLogFileName(s);
+		return ManFactory.getInstance().isValid(s);
 	}
 	
 	public static void main(String[] args){
