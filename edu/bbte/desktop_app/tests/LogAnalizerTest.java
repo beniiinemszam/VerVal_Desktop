@@ -26,9 +26,9 @@ public class LogAnalizerTest {
     @Before
 	public void setup(){
     	fileExtMan = new FakeFileExtMan(true);
-		//la = new LogAnalizer(fileExtMan);manFactory = 
-    	la = new LogAnalizer();
+		//la = new LogAnalizer(ManFactory.getInstance().getFileExtMan());
 		ManFactory.getInstance().setFileExtMan(fileExtMan);
+    	la = new TestableLogAnalizer(ManFactory.getInstance().getFileExtMan());
 	}
 	
 	@Parameters
