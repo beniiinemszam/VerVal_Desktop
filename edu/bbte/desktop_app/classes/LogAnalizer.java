@@ -4,11 +4,11 @@ import edu.bbte.desktop_app.interfaces.FileExtMan;
 
 public class LogAnalizer{
 
-	/*private FileExtMan fileExtMan;
+	private FileExtMan fileExtMan;
 	
 	public LogAnalizer(FileExtMan fileExtMan){
 		this.fileExtMan = fileExtMan;
-	}*/
+	}
 	public LogAnalizer(){
 		
 	}

@@ -28,7 +28,7 @@ public class LogAnalizerTest {
     	fileExtMan = new FakeFileExtMan(true);
 		//la = new LogAnalizer(ManFactory.getInstance().getFileExtMan());
 		ManFactory.getInstance().setFileExtMan(fileExtMan);
-    	la = new TestableLogAnalizer(ManFactory.getInstance().getFileExtMan());
+    	la = new TestableLogAnalizer();
 	}
 	
 	@Parameters
@@ -54,7 +54,8 @@ public class LogAnalizerTest {
 	@Test
 	public void isValidLogFileNameReturnTrue() throws IllegalArgumentException{
 		//fileExtMan.setWillReturn(fExpected);
-		ManFactory.getInstance().getFileExtMan().setWillReturn(fExpected);
+		//ManFactory.getInstance().getFileExtMan().setWillReturn(fExpected);
+		la.getFileExtMan().setWillReturn(fExpected);
 	    assertEquals(la.isValidLogFileName(fInput),fExpected);	
 	}
 }
